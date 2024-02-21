@@ -2,6 +2,7 @@
     --main-purple-normal: #dd3dab;
     --main-purple-dark: #c211a0;
     --main-white: #ffff;
+    --main-gray: #c4bcd3;
 }
 
 * {
@@ -13,8 +14,125 @@
 
 body {
     font-size: 1rem;
+    background: rgb(36, 2, 69);
+    background: linear-gradient(90deg, rgba(36, 2, 69, 0.9192051820728291) 0%, rgba(184, 85, 255, 0.9360119047619048) 100%);
+}
+
+li {
+    display: inline-block;
+    transition: all .4s ease-in-out;
 }
 
 a {
     text-decoration: none;
+    color: var(--main-white);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.header-left h1 {
+    font-size: 1.4rem;
+    color: var(--main-purple-normal);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.header-mid ul li {
+    margin: 0 1rem;
+    font-size: .80rem;
+}
+
+.active {
+    border-bottom: 1px solid var(--main-purple-normal);
+}
+
+.header-right a {
+    font-size: .80rem;
+}
+
+.header-right a i {
+    margin-left: .5rem;
+    background-color: var(--main-white);
+    color: var(--main-purple-dark);
+    border-radius: 50px;
+    padding: .4rem;
+    font-size: .75rem;
+}
+
+.header-burger {
+    position: relative;
+}
+
+.header-burger i {
+    color: var(--main-white);
+    cursor: pointer;
+}
+
+.header-burger-list {
+    background-color: var(--main-white);
+    border-radius: 10px;
+    position: absolute;
+    left: 100px;
+
+}
+
+.header-burger-list ul li {
+    display: block;
+    margin: 1rem 0;
+    padding: 0 .5rem;
+    font-size: .75rem;
+}
+
+.header-burger-list ul li a {
+    color: var(--main-purple-dark);
+}
+main{
+    overflow: hidden;
+}
+.main-content {
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.main-left h1 {
+    color: var(--main-white);
+    width: 50%;
+}
+
+.main-left p {
+    color: var(--main-gray);
+    font-size: .80rem;
+    line-height: 2;
+    margin: 1rem 0;
+}
+
+.main-left button {
+    border: 1px solid var(--main-purple-dark);
+    border-radius: 50px;
+    padding: .3rem 1.5rem;
+    font-size: .75rem;
+    color: var(--main-white);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+}
+
+.btn-first {
+    background-color: var(--main-purple-dark);
+    margin-right: .3rem;
+}
+
+.btn-second {
+    background-color: inherit;
+    border: 1px solid var(--main-purple-dark);
+}
+
+.btn-second:hover {
+    background-color: var(--main-purple-dark);
 }
