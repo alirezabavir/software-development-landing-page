@@ -1,0 +1,20 @@
+:root {
+    --main-purple-normal: #dd3dab;
+    --main-purple-dark: #c211a0;
+    --main-white: #ffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
