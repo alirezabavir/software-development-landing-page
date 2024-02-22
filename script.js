@@ -1,6 +1,7 @@
 let btnOpenMenu = document.querySelector("#openmenu");
 let btnCloseMenu = document.querySelector("#closemenu");
-let menuBox = document.querySelector(".header-burger-list")
+let menuBox = document.querySelector(".header-burger-list");
+let menuItems = document.querySelectorAll(".menu-items");
 btnOpenMenu.addEventListener("click", openMenu)
 function openMenu() {
     menuBox.style.left = -75 + "px";
@@ -18,3 +19,12 @@ function closeMenu() {
     menuBox.classList.add("d-none")
 
 }
+menuItems.forEach(item => {
+    item.addEventListener("click", addClass)
+    function addClass(event) {
+        for (let i = 0; i < menuItems.length; i++) {
+            menuItems[i].classList.remove("active")
+        }
+        event.target.parentElement.classList.add("active");
+    }
+})
